@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="japanesifyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Japanesify</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/reset.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:400,100,300" rel="stylesheet" type="text/css">
+    <link href="https://s3-us-west-2.amazonaws.com/japanfonts/Ming+Imperial.TTF" rel="stylesheet" type="text/css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/japanesifyController.js"></script>
+    <script src="scripts/services/translationFactory.js"></script>
+    <script src="scripts/services/japanesifyService.js"></script>
+    <script src="scripts/services/rulesService.js"></script>
+    <script src="scripts/services/conversionConstant.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <p id='h1'>Japanesify</p>
+
+      <section class="wrapper" ng-controller="japanesifyController as ctrl">
+        <section>
+          <p id='h2'>Please enter your name below</p>
+          <form>
+            <input id="input" type="text" ng-model="name" placeholder="e.g. Misa">
+            <button id="submit" ng-click="ctrl.newTranslation(name)">Submit</button>
+          </form>
+        </section>
+
+        <section class="translation" ng-show="ctrl.translationObj.japanese">
+          <p id='h3'>Your name translates to</p>
+          <section>
+            <section class="ming ming-lg">
+              {{ctrl.translationObj.japanese}}
+            </section>
+            <a target="_blank" href="http://twitter.com/home?status=This is my name in Japanese: {{ctrl.translationObj.japanese}}" /><img src="images/twitter-icon.png" alt=""  class="twitter"/></a>
+            <a target="_blank" href="https://translate.google.com/#auto/ja/{{ctrl.translationObj.japanese}}"><img src="images/speaker-icon.png" alt=""/></a>
+            <a href="#" ng-click="ctrl.printId($index);"><img src="images/printer-icon.png" alt="Print your name!" class="print" /></a>
+          </section>
+        </section>
+
+        <section class="translation">
+          <h3 ng-show="ctrl.translationObj.japanese">Previous searches</h3>
+          <ul>
+            <li ng-repeat="translation in ctrl.allTranslations">
+              {{ translation.romanji }}: <span id="translation-{{$index}}" class="ming ming-sm">{{ translation.japanese }}</span>
+            </li>
+          </ul>
+        </section>
+
+      </section>
+    </main>
+  </body>
+</html>

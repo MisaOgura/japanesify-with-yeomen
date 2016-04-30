@@ -1,0 +1,112 @@
+body {
+  background-image: url("/images/cherryblossom.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(255,243,243);
+}
+
+.wrapper {
+  margin:auto;
+  padding:0.5em;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 8px;
+  max-width: 31em;
+  color: rgb(112,47,47);
+  font-family: 'Avent Pro', sans-serif;
+  font-weight: 300;
+}
+
+.translation {
+  margin-top:1em;
+}
+
+.ming {
+  font-family: "Ming Imperial", serif;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+.ming-lg {
+  padding-top: 20px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.ming-sm {
+  font-size: 20px;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+#h1 {
+  text-align: center;
+  margin: auto;
+  padding:0.7em 0 0.6em 0;
+  font-size: 110px;
+  text-shadow: 4px 2px #D0A2A2;
+  color: rgb(255,255,255);
+  font-family: 'Aladin', sans-serif;
+}
+
+#h2 {
+  font-size: 30px;
+  margin-bottom: 0.3em;
+
+}
+
+#h3 {
+  font-size: 25px;
+  padding: 5px 0px;
+}
+
+form {
+  max-width: 30em;
+}
+
+input {
+  width: 360px;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  font-family: 'Avent Pro', sans-serif;
+  font-weight: 300;
+  border: 0;
+  position: inline-block;
+  background-color: rgb(255,255,255);
+}
+
+button {
+  float: right;
+  padding: 5px;
+  height: 40px;
+  width: 70px;
+  font-family: 'Avent Pro', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  position: inline-block;
+  background-color: rgb(255,255,255);
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 18px;
+  height: 18px;
+  padding: 0px 2px 0px 2px;
+}
+
+.twitter{
+  width: 17px;
+  height: 17px;
+}
+
+.print {
+  padding: 0px 0px 0px 0px;
+  width: 20px;
+  height: 20px;
+}
